@@ -1,1 +1,1 @@
-Motivatinator
+# ubuntu-template
