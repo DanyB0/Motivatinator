@@ -39,7 +39,7 @@ async def on_ready():
         print("Messaggio inviato :)")
 
     # calls the function everyday
-    scheduler.add_job(send, "interval", seconds=5)
+    scheduler.add_job(send, "interval", seconds=86400)
 
 
 # run the bot
