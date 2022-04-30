@@ -12,6 +12,9 @@ Just send a random daily message in a Discord guild
   pip install -r requirements.txt
   ```
   
-* #### Create a .env file in the bot folder and write your bot token [(How to create a Discord bot)](https://discordpy.readthedocs.io/en/stable/discord.html)
-   [![Cattura.png](https://i.postimg.cc/SRYxq62v/Cattura.png)](https://postimg.cc/8fDSmrbR)
+- Create a `.env` file in the bot folder and write your bot token [(How to create a Discord bot)](https://discordpy.readthedocs.io/en/stable/discord.html)
+
+  ```bash
+  TOKEN="BOT_TOKEN"
+  ```
    
