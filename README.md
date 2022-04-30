@@ -10,7 +10,7 @@ Just send a random daily message in a Discord guild
 ### Windows
 - Clone the repository
   ```bash
-  git clone https://github.com/DanyB0/salvatore-aranzulla.git
+  git clone https://github.com/DanyB0/motivatinator.git
   ```
 - Install [Python>=3.8 pip](https://www.python.org/)
 - Install the requirements
