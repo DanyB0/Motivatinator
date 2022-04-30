@@ -1,4 +1,4 @@
-# #motivatinator
+# Motivatinator
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![version](https://img.shields.io/github/v/release/DanyB0/motivatinator?color=orange)](https://github.com/DanyB0/motivatinator/releases)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
@@ -6,8 +6,14 @@
 # What does this bot do?
 Just send a random daily message in a Discord guild
 
-# Local setup
-- #### install the requirements
+# Installing
+### Windows
+- Clone the repository
+  ```bash
+  git clone https://github.com/DanyB0/salvatore-aranzulla.git
+  ```
+- Install [Python>=3.8 pip](https://www.python.org/)
+- Install the requirements
   ```bash
   pip install -r requirements.txt
   ```
