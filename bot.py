@@ -1,15 +1,30 @@
 import os
 import random
-from os import getenv
 
 import discord
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from discord import Intents
 from discord.ext import commands
-from dotenv import load_dotenv
 
-load_dotenv()
-TOKEN = getenv("TOKEN")
+import utils
+
+# takes the date and the hour
+date, hour = utils.dt_hr()
+
+# first log file
+if not os.path.exists("logs"):
+    os.mkdir("logs")
+os.chdir("logs")
+
+if not os.path.exists(f"{date}.txt"):
+    with open(f"{date}.txt", "w") as lg:
+        lg.write(
+            f"---------FILE DI LOG---------\nDATA CREAZIONE = {date}\nORA CREAZIONE = {hour}\n-----------------------------\n"
+        )
+else:
+    pass
+
+os.chdir(utils.BASE_DIR)
 
 intents = Intents.default()
 intents.members = True
@@ -31,16 +46,18 @@ async def on_ready():
     # channel = bot.get_channel(CHANNEL_ID)
     channel = bot.get_channel(951156001434914866)
     print(channel)
+    utils.write_logs("Start", "Bot started")
 
     async def send():
         # get a random number that will be the index of the message in the list
         i = random.randint(0, len(frasi) - 1)
         await channel.send(f"Stay motivated!:\n\n***{frasi[i]}***")
         print("Messaggio inviato :)")
+        utils.write_logs("Message", "Message sent")
 
     # calls the function everyday
-    scheduler.add_job(send, "interval", seconds=86400)
+    scheduler.add_job(send, "interval", seconds=5)
 
 
 # run the bot
-bot.run(TOKEN)
+bot.run(utils.TOKEN)
