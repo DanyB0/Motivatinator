@@ -56,7 +56,7 @@ async def on_ready():
         utils.write_logs("Message", "Message sent")
 
     # calls the function everyday
-    scheduler.add_job(send, "interval", seconds=5)
+    scheduler.add_job(send, "interval", seconds=86400)
 
 
 # run the bot
