@@ -26,7 +26,7 @@ Just send a random daily message in a Discord guild
 ### Linux or WSL
 - Clone the repository
   ```bash
-  $ git clone https://github.com/DanyB0/salvatore-aranzulla.git
+  $ git clone https://github.com/DanyB0/motivatinator.git
   ```
 - Install Python>=3.8 pip and FFmpeg for playing songs
 - Create a `.env` file in the bot folder and write your bot token [(How to create a Discord bot)](https://discordpy.readthedocs.io/en/stable/discord.html)
