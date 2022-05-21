@@ -23,4 +23,19 @@ Just send a random daily message in a Discord guild
   ```bash
   TOKEN="BOT_TOKEN"
   ```
-   
+### Linux or WSL
+- Clone the repository
+  ```bash
+  $ git clone https://github.com/DanyB0/salvatore-aranzulla.git
+  ```
+- Install Python>=3.8 pip and FFmpeg for playing songs
+- Create a `.env` file in the bot folder and write your bot token [(How to create a Discord bot)](https://discordpy.readthedocs.io/en/stable/discord.html)
+
+  ```bash
+  TOKEN="BOT_TOKEN"
+  ```
+
+- Run the `install.sh` script
+- Run the `start.sh` script
+- For updating the bot you can run the `update.sh` script
+
