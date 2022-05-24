@@ -36,7 +36,7 @@ with open("frasi.txt", "r", encoding="utf8") as fl:
     frasi_list = fl.readlines()
 
 # emoji
-emoji_list = [":fire:", ":books:", ":recycle:"]
+emoji_list = [":fire:", ":books:", ":recycle:", ":mushroom:", ":seedling:", ":sparkles:", ":scroll:"]
 
 scheduler = AsyncIOScheduler()
 scheduler.configure(timezone="utc")
