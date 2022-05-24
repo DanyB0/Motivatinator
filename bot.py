@@ -47,7 +47,7 @@ scheduler.start()
 async def on_ready():
     # change the ID to your channel ID
     # channel = bot.get_channel(CHANNEL_ID)
-    channel = bot.get_channel(951156001434914866)
+    channel = bot.get_channel(948279433171730532)
     print(f"canale motivazionale: {channel}")
     utils.write_logs("Start", "Bot started")
 
@@ -69,7 +69,7 @@ async def on_ready():
         utils.write_logs("Message", "Message sent")
 
     # calls the function everyday
-    scheduler.add_job(send, "interval", seconds=3)
+    scheduler.add_job(send, "interval", seconds=86400)
 
 
 # run the bot
