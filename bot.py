@@ -3,6 +3,7 @@ import random
 
 import discord
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.cron import CronTrigger
 from discord import Intents
 from discord.ext import commands
 
@@ -36,7 +37,8 @@ with open("frasi.txt", "r", encoding="utf8") as fl:
     frasi_list = fl.readlines()
 
 # emoji
-emoji_list = [":fire:", ":books:", ":recycle:", ":mushroom:", ":seedling:", ":sparkles:", ":scroll:"]
+emoji_list = [":fire:", ":books:", ":recycle:",
+              ":mushroom:", ":seedling:", ":sparkles:", ":scroll:"]
 
 scheduler = AsyncIOScheduler()
 scheduler.configure(timezone="utc")
@@ -69,7 +71,8 @@ async def on_ready():
         utils.write_logs("Message", "Message sent")
 
     # calls the function everyday
-    scheduler.add_job(send, "interval", seconds=86400)
+    # scheduler.add_job(send, "cron", day_of_week="mon-fri", hour=17, minute=51)
+    scheduler.add_job(send, CronTrigger.from_crontab("00 08 * * * "))
 
 
 # run the bot
